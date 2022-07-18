@@ -1,0 +1,18 @@
+// filename: message.proto
+
+syntax = "proto3";
+package grpc.test.message;
+option go_package="github.com/HermesNamco/GrpcTest/protocol";
+
+service HelloService {
+  rpc Hello (HelloReq) returns (HelloRsp) {}
+}
+
+message HelloReq {
+  int32 code = 1;
+  string msg = 2;
+}
+
+message HelloRsp {
+  string msg = 1;
+}
